@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" android:paddingBottom="15sp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="401dp"
+        android:layout_height="wrap_content" app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp" app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" app:cardElevation="@dimen/cardview_default_elevation">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:elevation="@dimen/cardview_compat_inset_shadow">
+
+            <TextView
+                android:id="@+id/TitlePost"
+                android:layout_width="265dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="7dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="48dp"
+                android:text="TextView"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/BodyPost"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/IdPost"
+                app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:text="TextView"
+                android:layout_width="55dp"
+                android:layout_height="19dp" android:id="@+id/IdPost"
+                android:textSize="14sp" android:textStyle="bold|italic"
+                app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="27dp"
+                app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toStartOf="@+id/TitlePost" android:layout_marginEnd="7dp"
+                android:layout_marginBottom="12dp" app:layout_constraintBottom_toTopOf="@+id/BodyPost"/>
+            <TextView
+                android:text="TextView"
+                android:layout_width="305dp"
+                android:layout_height="wrap_content" android:id="@+id/BodyPost"
+                android:textSize="18sp"
+                app:autoSizeTextType="none"
+                app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="49dp"
+                android:layout_marginEnd="48dp" app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="7dp"
+                app:layout_constraintTop_toBottomOf="@+id/TitlePost" android:layout_marginTop="4dp"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
